@@ -1,0 +1,209 @@
+:root {
+  --primary-color: #007bff;
+  --background-color: #f4f7f6;
+  --form-bg: #ffffff;
+  --text-color: #333;
+  --border-color: #ddd;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  background: var(--form-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.form-row,
+.ppe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ppe-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Cairo', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.message {
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  display: none;
+  /* Hidden by default */
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  display: block;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  display: block;
+}
+
+/* --- Footer Styles (Corrected for Mobile) --- */
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  /* Added more vertical padding */
+  margin-top: 40px;
+  /* Increased space from content above */
+  border-top: 1px solid var(--border-color);
+  /* Added a subtle line for separation */
+}
+
+/* This is the main fix for the container */
+.social-icons {
+  display: flex;
+  /* Activates Flexbox */
+  flex-wrap: wrap;
+  /* Allows icons to wrap to the next line */
+  justify-content: center;
+  /* Keeps icons centered horizontally */
+  gap: 20px;
+  /* Modern way to add space between icons */
+  margin-bottom: 15px;
+  /* Adds space between icons and credit text */
+}
+
+.social-icons a {
+  display: inline-block;
+  /* margin is now handled by 'gap', so we can remove it from here */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+}
+
+.social-icons svg {
+  width: 32px;
+  height: 32px;
+  fill: #555;
+  transition: fill 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  fill: var(--primary-color);
+}
+
+.footer-credit {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  /* Slightly smaller for a cleaner look */
+  color: #777;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: ltr;
+}
+/* --- تعديلات خاصة بشاشات الموبايل --- */
+@media (max-width: 768px) {
+
+  /*
+    هذا الكود يستهدف الحاوية التي تحتوي على خانتي القسم والتاريخ
+    ويغير تخطيطها من عمودين إلى عمود واحد فقط
+  */
+  .form-row {
+    grid-template-columns: 1fr;
+    /* تغيير من عمودين إلى عمود واحد */
+  }
+
+  /* تعديل إضافي لتحسين شكل الفورم على الموبايل */
+  .form-container {
+    padding: 20px;
+  }
+
+  header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.5em;
+  }
+}
