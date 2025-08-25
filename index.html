@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل استلام مهمات الوقاية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <header>
+            <h1>نموذج تسجيل المهمات</h1>
+
+        </header>
+
+        <form id="ppe-form">
+            <h2>بيانات الموظف</h2>
+            <div class="form-group">
+                <label for="employeeCode">الكود الوظيفي</label>
+                <input type="text" id="employeeCode" name="employeeCode" required>
+            </div>
+            <div class="form-group">
+                <label for="employeeName">اسم الموظف</label>
+                <input type="text" id="employeeName" name="employeeName" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="department">القسم</label>
+                    <input type="text" id="department" name="department" required>
+                </div>
+                <div class="form-group">
+                    <label for="receiptDate">تاريخ الاستلام</label>
+                    <input type="date" id="receiptDate" name="receiptDate" required>
+                </div>
+            </div>
+
+            <h2>قائمة المهمات (أدخل الكمية)</h2>
+            <div class="ppe-grid">
+                <div class="form-group">
+                    <label for="helmet">خوذة</label>
+                    <input type="number" id="helmet" name="helmet" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="goggles">نظارة</label>
+                    <input type="number" id="goggles" name="goggles" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="gloves">قفازات</label>
+                    <input type="number" id="gloves" name="gloves" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="safetyShoes">حذاء سلامة</label>
+                    <input type="number" id="safetyShoes" name="safetyShoes" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="earplugs">سدادة أذن</label>
+                    <input type="number" id="earplugs" name="earplugs" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="safetyHarness">حزام أمان</label>
+                    <input type="number" id="safetyHarness" name="safetyHarness" min="0" value="0">
+                </div>
+            </div>
+
+            <button type="submit" id="submit-btn">إرسال البيانات</button>
+        </form>
+
+        <div id="message" class="message"></div>
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mostafa-eissa-dev" target="_blank" title="LinkedIn"><svg
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.43 12.9,11.2V10.13H10.13V18.5H12.9V13.57C12.9,12.8 13.5,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,6 7.78,5.2 6.88,5.2A1.69,1.69 0 0,0 5.2,6.88C5.2,7.78 6,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
+                    </svg></a>
+                <a href="mailto:mostafaeissa231@gmail.com" target="_blank" title="Gmail"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z" />
+                    </svg></a>
+            </div>
+            <p class="footer-credit">Designed & Developed by Mostafa Eissa</p>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
